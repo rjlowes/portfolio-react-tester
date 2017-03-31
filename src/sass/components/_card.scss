@@ -3,6 +3,25 @@
 
 .card {
 
+	transition: all 1s ease-in-out;
+
+	&-enter {
+		//transform: rotateX(90deg);
+		opacity: 0;
+	}
+
+	&-leave {
+		opacity: 1;
+	}
+
+	&-enter-active {
+		//transform: rotateX(90deg);
+		opacity: 1;
+	}
+
+	&-leave-active {
+		opacity: 0;
+	}
 }
 
 .card__img {

@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import ProjectListItem from '../modules/ProjectListItem';
@@ -35,25 +36,6 @@ export default class ProjectList extends React.Component {
 		console.log('componentWillUpdate');
 	}
 
-	componentWillAppear() {
-		console.log('anim componentWillAppear');
-	}
-	componentDidAppear() {
-		console.log('anim componentDidAppear');
-	}
-	componentWillEnter() {
-		console.log('anim componentWillEnter');
-	}	
-	componentDidEnter() {
-		console.log('anim componentDidEnter');
-	}
-	componentWillLeave() {
-		console.log('anim componentWillLeave');
-	}
-	componentDidLeave() {
-		console.log('anim componentDidLeave');
-	}
-
 	loadProjects() {
 		var data = [];
 		for(var i = 0; i <= 13; i++) {
@@ -65,8 +47,9 @@ export default class ProjectList extends React.Component {
 		}
 
 		this.projects = data;
-		this.setState({projects: data});
+		//this.setState({projects: data});
 		this.paginate();
+		this.choosePage();
 	}
 
 	paginate() {
@@ -93,23 +76,29 @@ export default class ProjectList extends React.Component {
 	}
 
 	render() {
+
+		const projects = this.state.projects.map((project, i) => (
+			<li key={i} className="col-sm-3">
+				<ProjectListItem project={project} />
+			</li>
+		));
+
 		return (
 			<div>
 				<h1>Project list</h1>
 				<ReactCSSTransitionGroup
-					component="ul" className="row"
-		          transitionName="example"
-		          transitionEnterTimeout={1000}
-		          transitionLeaveTimeout={1000}>
-		          {this.state.projects.map(function (project, index) {
-						return <li key={index} className="col-sm-3"><ProjectListItem project={project} /></li>
-					})}
+					component="ul"
+					className="row"
+					transitionName="card"
+					transitionEnterTimeout={1000}
+					transitionLeaveTimeout={1000}>
+		        	{projects}
 		        </ReactCSSTransitionGroup>
 				<ul>
 					<li onClick={this.prev}>prev</li>
 					<li onClick={this.next}>next</li>
 				</ul>
 			</div>
-		)
+		);
 	}
 }
