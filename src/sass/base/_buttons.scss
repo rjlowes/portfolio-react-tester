@@ -1,0 +1,61 @@
+
+// TODO move to reset
+button {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn {
+
+}
+
+
+.icon-btn {
+    cursor: pointer;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 23px;
+	color: black;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+    &--inverse {
+        color: white;
+    }
+}
+
+.icon-btn__icon {
+	display: inline-block;
+	vertical-align: top;
+	height: 23px;
+	width: 24px;
+	margin-left: 6px;
+}
+
+
+/*
+position: relative;
+    display: block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 23px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+
+
+
+
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 23px;
+    width: 28px;
+    margin: 0 0 0 17px;
+*/

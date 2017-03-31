@@ -1,0 +1,73 @@
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width-base:     12px !default;
+
+// Layout
+//;
+$baseline: 6px;
+
+// Typography
+//
+$f-font-family-bold: 'robotobold';
+$f-font-family-regular: 'robotoregular';
+$f-font-family-lite: 'robotolight';
+
+// New typography with 6px baseline
+$f-font-size-h1: 3.6; /* 36px */
+$f-font-size-h2: 3; /* 30px */
+$f-font-size-h3: 2.4; /* 24px */
+$f-font-size-h4: 2; /* 20px */
+$f-font-size-h5: 1.8; /* 18px */
+$f-font-size-h6: 1.4; /* 36px */
+$f-font-size-body: 1.4;
+$f-font-size-small: 1.2;
+
+$f-line-height-h1: 1.167; /* 42px */
+$f-line-height-h2: 1.2; /* 36px */
+$f-line-height-h3: 1.458; /* 36px */
+$f-line-height-h4: 1.5; /* 30px */
+$f-line-height-h5: 1.667; /* 30px */
+$f-line-height-h6: 2.143; /* 18px */
+$f-line-height-body: 1.286; /* 18px */
+$f-line-height-small: 1.5;	/* 18px */
+
+// General colours
+//
+// We follow a naming convention from this website https://coolors.co/4de7ee-ff87b2-ffff6c-93f280-333333.
+// We prefix all colours with $f- and keep the casing to kebab case.
+// -----------------------------
+$f-outer-space-100: #4a4a4a;
+$f-white-100: #ffffff;
+$f-registration-black-100: #000000;
+$f-jet-100: #333333;
+$f-granite-grey-100: #646464;
+$f-raisin-black-100: #242424;
+$f-registration-black-25: rgba(0, 0, 0, 0.25);
+$f-eerie-black-100: #181818;
+$f-bleu-de-france-100: #2b8edb;
+$f-platinum-100: #e6e6e6;
+$f-registration-black-50: rgba(0, 0, 0, 0.5);
+$f-white-smoke-100: #f6f6f6;
+$f-pastel-gray-100: #cccccc;
+$f-timberwolf-100: #d8d8d8;
+$f-isabelline-100: #ececec;
+$f-trolley-grey-100: #7f7f7f;
+$f-cyan-cobolt-blue-100: #3b55a0;
+$f-sonic-silver-100: #757575;
+$f-vermilion-100: #ea4335;
+$f-blueberry-100: #4285f4;
+$f-selective-yellow-100: #fbbc05;
+$f-sea-green-100: #34a853;
+$f-light-gray-100: #d1d1d1;
+$f-anti-flash-white-100: #f2f2f2;
+$f-air-force-blue-usaf-100: #003087;
+$f-vivid-cerulean-100: #009cde;
+$f-honeydew-100: #f2ffe3;
+$f-alien-armpit-100: #7ed321;
+$f-goldenrod-100: #d3a921;
+$f-cornsilk-100: #fffcda;
+$f-misty-rose-100: #ffe0e0;
+$f-maximum-red-100: #d32121;
+$f-lapis-lazuli-100: #1f6fa1;
+$f-dark-medium-gray-100: #a9a9a9;

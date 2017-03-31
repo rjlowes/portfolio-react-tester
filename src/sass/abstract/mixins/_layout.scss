@@ -1,0 +1,40 @@
+// Spacing
+//
+// For consistent spacing and to maintain a vertical rhythm, we use a level system for both margin and padding. Padding can
+// be applied by using the classes padding--lv1 through padding--lv8, while margin uses the margin--lv1 through margin--lv8
+// scale. Use !padding--lv0 or !margin--lv0 to completely remove any margin or padding from the element.
+//----------------------------------
+
+$margin-or-padding: "margin", "padding";
+
+@mixin make-padding-margin () {
+    @each $metric in $margin-or-padding {
+        @for $i from 0 through 8 {
+            .f-#{$metric}--#{$i} {
+                #{$metric}: if($i == 0, 0, #{$i * $baseline});
+            }
+            .f-#{$metric}-top--#{$i} {
+                #{$metric}-top: if($i == 0, 0, #{$i * $baseline});
+            }
+            .f-#{$metric}-bottom--#{$i} {
+                #{$metric}-bottom: if($i == 0, 0, #{$i * $baseline});
+            }
+            .f-#{$metric}-left--#{$i} {
+                #{$metric}-left: if($i == 0, 0, #{$i * $baseline});
+            }
+            .f-#{$metric}-right--#{$i} {
+                #{$metric}-right: if($i == 0, 0, #{$i * $baseline});
+            }
+            .f-#{$metric}-left-right--#{$i} {
+                @extend .f-#{$metric}-left--#{$i};
+                @extend .f-#{$metric}-right--#{$i};
+            }
+            .f-#{$metric}-top-bottom--#{$i} {
+                @extend .f-#{$metric}-top--#{$i};
+                @extend .f-#{$metric}-bottom--#{$i};
+            }
+        }
+    }
+}
+
+@include make-padding-margin();

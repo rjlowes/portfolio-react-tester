@@ -1,0 +1,32 @@
+@import 'abstract/variables';
+@import 'abstract/mixins/clearfix';
+@import 'abstract/mixins/layout';
+@import 'abstract/mixins/screen-readers';
+
+@import 'base/reset';
+@import "base/buttons";
+@import 'base/typography-font-face';
+@import 'base/typography';
+
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+
+
+@import "components/card";
+@import "components/global-header";
+@import "components/jumbo-banner";
+@import "components/navbar";
+
+
+// Basic look going for http://briannathanhartwell.com/about
+// Home page typewriter thingy http://www.pixies-agency.fr/en/
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+	background: #f2f1ed url("../images/texture-light.png");
+	color: #111112;
+
+}
